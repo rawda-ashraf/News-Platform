@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Liga Matches</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/matches.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg nav1">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="120">
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mx-5">
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold active text-light"
+                            href="matches.html">Matches</a></li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light" href="table.html">Table</a></li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light"
+                            href="statistics.html">Statistics</a></li>
+                </ul>
+
+                <div class="d-flex ms-auto">
+                    <button type="button" class="btn btn-outline-danger btn-nav fw-bold"> <span><i
+                                class="fa-solid fa-circle"></i></span> Live</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col bg-danger line-br"></div>
+            <div class="col bg-warning line-br"></div>
+            <div class="col bg-success line-br"></div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">
+            <i class="fas fa-futbol me-2"></i>
+            La Liga Matches
+        </h2>
+        <div class="stats-bar mb-4" id="stats-bar">
+            <div class="row text-center">
+                <div class="col-4">
+                    <span class="stat-label">Total Matches</span>
+                    <span class="stat-value" id="total-matches">0</span>
+                </div>
+                <div class="col-4">
+                    <span class="stat-label">Today's Matches</span>
+                    <span class="stat-value" id="today-matches">0</span>
+                </div>
+                <div class="col-4">
+                    <span class="stat-label" style="color: #ff4444;">Live</span>
+                    <span class="stat-value" style="color: #ff4444;" id="live-matches-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4 g-3">
+            <div class="col-md-6">
+                <div class="filter-wrapper">
+                    <i class="fas fa-search filter-icon"></i>
+                    <input type="text" id="team-filter" class="form-control" placeholder="Search by team...">
+                    <button class="btn-clear-filter" id="clear-team-filter" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="filter-wrapper">
+                    <i class="fas fa-calendar filter-icon"></i>
+                    <input type="date" id="date-filter" class="form-control">
+                    <button class="btn-clear-filter" id="clear-date-filter" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="active-filters mb-3" id="active-filters"></div>
+        <div id="matches-container">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+    <script src="js/matches.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg nav1">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="120">
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <ul class="navbar-nav mx-5">
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold active text-light" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light" href="matches.html">Matches</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light" href="table.html">Table</a></li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light"
+                            href="statistics.html">Statistics</a></li>
+                </ul>
+
+                <div class="d-flex ms-auto">
+                    <button type="button" class="btn btn-outline-danger btn-nav fw-bold"> <span><i
+                                class="fa-solid fa-circle"></i></span> Live</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col bg-danger line-br"></div>
+            <div class="col bg-warning line-br"></div>
+            <div class="col bg-success line-br"></div>
+        </div>
+    </section>
+
+    <header class="container my-4">
+        <div class="row">
+            <main class="col-lg-9 ">
+                <section class="sec-sport-news">
+                    <h3 class="mb-3">Sports</h3>
+                    <div class="row g-4" id="sports-news-container">
+                    </div>
+                </section>
+
+                <section class="sec-sport-news my-4">
+                    <h3 class="mb-3">Technology</h3>
+                    <div class="row g-4" id="tech-news-container">
+                    </div>
+                </section>
+
+                <section class="sec-sport-news my-4">
+                    <h3 class="mb-3">Health</h3>
+                    <div class="row g-4" id="health-news-container">
+                    </div>
+                </section>
+            </main>
+
+            <aside class="col-lg-3">
+
+                <section class="weather-widget my-5">
+                    <h5 class="pt-1">Weather</h5>
+                    <div class="weather-box">
+                        <h5 id="city">Loading...</h5>
+                        <img id="weather-icon" src="" alt="weather icon" width="70">
+                        <p>
+                            <span id="WMain"></span>
+                            <i class="fa-solid fa-grip-lines-vertical"></i> 
+                            <span id="temp"></span>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="rates text-center">
+                    <h5>Exchange Rates</h5>
+                    <div><i class="fa-solid fa-coins py-3"></i></div>
+                    <p id="usdRate"></p>
+                    <p id="sarRate"></p>
+                </section>
+
+                <section class="converter mt-5">
+                    <label for="amount form-label">
+                        <h5>Converter</h5>
+                    </label>
+                    <input class="form-control rounded-3 my-2" type="number" id="amount" placeholder="Enter amount">
+                    <div class="inputGro my-2">
+                        <label class="form-label" for="from">From</label>
+                        <select class="form-select" id="from"></select>
+                        <label class="form-label mt-2" for="to">To</label>
+                        <select class="form-select" id="to"></select>
+                    </div>
+                    <button class="btn btn-outline-light rounded-3 w-100 my-4" onclick="convert()">Convert</button>
+                    <h5 class="text-center" id="result"></h5>
+                </section>
+
+                <div class="live-card">
+                    <h5 class="text-center">Live Matches</h5>
+                    <div class="mt-4" id="live-matches">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"
+        integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

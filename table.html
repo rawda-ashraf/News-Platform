@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/table.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg nav1">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="120">
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mx-5">
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light" href="matches.html">Matches</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold active text-light" href="table.html">Table</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link me-3 fw-bold text-light"
+                            href="statistics.html">Statistics</a></li>
+                </ul>
+
+                <div class="d-flex ms-auto">
+                    <button type="button" class="btn btn-outline-danger btn-nav fw-bold"> <span><i
+                                class="fa-solid fa-circle"></i></span> Live</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col bg-danger line-br"></div>
+            <div class="col bg-warning line-br"></div>
+            <div class="col bg-success line-br"></div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">
+            La Liga Santander 2025/26
+        </h2>
+
+        <div class="table-responsive" id="table-container">
+            <div class="text-center py-5">
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading league table...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+    <script src="js/table.js"></script>
+</body>
+
+</html>

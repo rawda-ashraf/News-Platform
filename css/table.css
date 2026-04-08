@@ -1,0 +1,277 @@
+/* League Table Styles */
+.table-responsive {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.league-table {
+  width: 100%;
+  color: white;
+  border-collapse: collapse;
+}
+
+.league-table th {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.league-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+}
+
+.league-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.league-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Team Info */
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-info img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px;
+}
+
+.team-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Rank Styles */
+.rank {
+  font-weight: 700;
+  width: 50px;
+  text-align: center;
+}
+
+.rank-1,
+.rank-2,
+.rank-3,
+.rank-4 {
+  color: #ffd700;
+}
+
+/* Position Colors */
+.champions-league-row {
+  background: rgba(0, 100, 255, 0.1);
+  border-left: 3px solid #0066ff;
+}
+
+.europa-league-row {
+  background: rgba(255, 165, 0, 0.1);
+  border-left: 3px solid #ff9900;
+}
+
+.conference-league-row {
+  background: rgba(0, 255, 0, 0.1);
+  border-left: 3px solid #00cc00;
+}
+
+.relegation-row {
+  background: rgba(255, 0, 0, 0.1);
+  border-left: 3px solid #ff3333;
+}
+
+/* Stats Numbers */
+.stat-number {
+  font-weight: 600;
+  text-align: center;
+}
+
+.gd-positive {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.gd-negative {
+  color: #ff4444;
+  font-weight: 700;
+}
+
+.points {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffd700;
+}
+
+/* Legend */
+.legend-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.legend-color.champions-league {
+  background: #0066ff;
+}
+
+.legend-color.europa-league {
+  background: #ff9900;
+}
+
+.legend-color.conference-league {
+  background: #00cc00;
+}
+
+.legend-color.relegation {
+  background: #ff3333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .league-table {
+    font-size: 0.85rem;
+  }
+
+  .team-info img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .team-name {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 768px) {
+  .league-table th,
+  .league-table td {
+    padding: 10px 5px;
+    font-size: 0.75rem;
+  }
+
+  .team-info {
+    gap: 5px;
+  }
+
+  .team-name {
+    max-width: 80px;
+  }
+
+  .points {
+    font-size: 1rem;
+  }
+
+  .legend-box {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .league-table {
+    min-width: 600px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* League Tabs */
+.league-tabs {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.league-tabs .btn-group {
+  gap: 5px;
+}
+
+.league-tabs .btn {
+  border-radius: 50px !important;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.league-tabs .btn-primary {
+  background: #ff4444;
+  color: white;
+}
+
+.league-tabs .btn-outline-primary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.league-tabs .btn-outline-primary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.league-tabs .btn i {
+  margin-right: 8px;
+}
+
+/* Legend colors for Segunda */
+.legend-color.promotion {
+  background: #4caf50;
+}
+.legend-color.playoff {
+  background: #ffc107;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .league-tabs .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .league-tabs .btn i {
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .league-tabs .btn-group {
+    flex-direction: column;
+  }
+
+  .league-tabs .btn {
+    width: 100%;
+    margin: 2px 0;
+  }
+}
